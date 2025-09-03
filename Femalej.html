@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Business</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chela+One&family=Mozilla+Headline:wght@200..700&family=Playwrite+MX+Guides&family=Rouge+Script&family=Spicy+Rice&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./business.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+  <body>
+    <div class="brand-header">
+    <!-- Empty div to balance flex center -->
+    <div></div> 
+    
+    <!-- Brand Name -->
+    <h1 class="d-flex justify-content-center" style="font-family: Rouge Script; background-color: lightpink; color: white;">LuxPair</h1>
+
+    <!-- Cart Icon -->
+    <a href="./Cart.html" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count" 
+              style="position: absolute; top: -5px; right: -15px; background: deeppink; color: white; 
+                     font-size: 14px; padding: 2px 7px; border-radius: 50%;">
+            0
+        </span>
+    </a>
+</div>
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid" style="background-color: white;">
+    
+    <!-- Toggler button (for small screens) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./index.html" style="color: lightpink; font-family: luxurious script;">HOME</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#" style="color: lightpink; font-family: luxurious script;">ABOUT</a>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false" style="color: lightpink; font-family: luxurious script;">
+            SHOP
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./Malej.html" style="color: lightpink; font-family: luxurious script;">Male Jewelry</a></li>
+            <li><a class="dropdown-item" href="./Femalej.html" style="color: lightpink; font-family: luxurious script;">Female Jewelry</a></li>
+            <li><a class="dropdown-item" href="./Crocs.html" style="color: lightpink; font-family: luxurious script;">Crocs</a></li>
+            <li><a class="dropdown-item" href="./Snapback.html" style="color: lightpink; font-family: luxurious script;">Snapback</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- NAVBAR END -->
+
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ1.webp" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Blue Heart Set</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;5,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Blue Heart Set', 5000, './Asset/Images/FJ1.webp')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ2.webp" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Pink Flower Bracelet</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;5,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Pink Flower Bracelet', 5000, './Asset/Images/FJ2.webp')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ3.webp" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Infinity Bracelet</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;5,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Infinity Bracelet', 5000, './Asset/Images/FJ3.webp')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ4.webp" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Pearl Drop Necklace</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;10,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Pearl Drop Necklace', 10000, './Asset/Images/FJ4.webp')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+    </div><br><br><br>
+
+
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ5.webp" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Butterfly Necklace</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;5,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Butterfly Necklace', 5000, './Asset/Images/FJ5.webp')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ6.jpg" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Diamond Necklace</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;15,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Diamond Necklace', 15000, './Asset/Images/FJ6.jpg')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ7.jpg" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Silver Set Bracelet</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;20,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Silver Set Bracelet', 20000, './Asset/Images/FJ7.jpg')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ8.webp" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Bracelet Set</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;18,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Bracelet Set', 18000, './Asset/Images/FJ8.webp')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+    </div><br><br><br>
+
+
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ9.webp" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Memory Bracelet</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;5,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Memory Bracelet', 5000, './Asset/Images/FJ9.webp')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ10.jpg" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Red Diamond Earing</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;11,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Red Diamond Earing', 11000, './Asset/Images/FJ10.jpg')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ11.webp" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Green Gold Diamond</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;9,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Green Gold Diamond', 9000, './Asset/Images/FJ11.webp')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ12.jpg" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Blue Silver Diamond</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;10,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Blue Silver Diamond', 10000, './Asset/Images/FJ12.jpg')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+    </div><br><br><br>
+
+
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ13.webp" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Heart Gold Bracelet</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;6,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Heart Gold Bracelet', 6000, './Asset/Images/FJ13.webp')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ14.jpg" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Alphabet 'A' Bracelet</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;5,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Alphabet A Bracelet', 5000, './Asset/Images/FJ14.jpg')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ15.jpg" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Alphabet 'P' Bracelet</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;5,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Alphabet P Bracelet', 5000, './Asset/Images/FJ15.jpg')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ16.jpg" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Pink Bead Bracelet</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;6,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Pink Bead Bracelet', 6000, './Asset/Images/FJ16.jpg')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+    </div><br><br><br>
+
+
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ17.webp" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Silver Heart Bracelet</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;7,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Silver Heart Bracelet', 7000, './Asset/Images/FJ17.webp')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ18.jpg" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Bronze Diamond</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;10,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Bronze Diamond', 10000, './Asset/Images/FJ18.jpg')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ19.webp" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Heart Bead Bracelet</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;7,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Heart Bead Bracelet', 7000, './Asset/Images/FJ19.webp')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 200px; border-color: lightpink;">
+                <img src="./Asset/Images/FJ20.webp" style="height: 130px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: lightpink;">Silver Bead Bracelet</h6><hr>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <h6 style="color: lightpink;">&#8358;8,000</h6>
+                        <div class="rating" style="padding-bottom: 10px;">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="far fa-star" data-value="4"></i>
+                            <i class="far fa-star" data-value="5"></i>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-custom"
+                    style="color: lightpink; border-color: lightpink; width: 150px; margin-left: 20px;"
+                    onclick="addToCart('Silver Bead Bracelet', 8000, './Asset/Images/FJ20.webp')">
+                    Add To Cart
+                </button><br>
+            </div>
+        </div>
+    </div><br><br><br>
+
+
+    <script>
+    // Make star rating interactive
+    document.querySelectorAll('.rating').forEach(rating => {
+        const stars = rating.querySelectorAll('i');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const value = star.getAttribute('data-value');
+
+                // Reset all stars
+                stars.forEach(s => s.classList.replace('fas', 'far'));
+
+                // Fill in the selected stars
+                for (let i = 0; i < value; i++) {
+                    stars[i].classList.replace('far', 'fas');
+                }
+
+                // (Optional) Save rating somewhere
+                console.log("Rated:", value, "stars");
+            });
+        });
+    });
+
+    function addToCart(name, price, image) {
+        // Get cart from localStorage or create an empty one
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Add new item
+        cart.push({ name: name, price: price, image: image });
+
+        // Save updated cart
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Update cart counter (if you have one)
+        updateCartCount();
+
+        alert(name + " has been added to your cart!");
+    }
+
+    function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let countElement = document.getElementById("cart-count");
+        if (countElement) {
+            countElement.innerText = cart.length;
+        }
+    }
+
+    // Make sure count updates on page load
+    document.addEventListener("DOMContentLoaded", updateCartCount);
+
+
+
+
+
+    function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ name, price, image });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        
+        updateCartCount();  // update number near cart icon
+        alert(name + " added to cart!");
+    }
+
+    function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        document.getElementById("cart-count").innerText = cart.length;
+    }
+
+    // Run when page loads
+    document.addEventListener("DOMContentLoaded", updateCartCount);
+
+    
+</script>
+
+
+<script type="module">
+  import { auth, db } from "./firebase-init.js";
+
+  // Example: listen for login
+  console.log("Firebase loaded:", auth, db);
+</script>
+
+
+    
+
+    <!-- Footer Section -->
+<footer class="text-white py-5" style="background-color: lightpink;">
+  <div class="container text-center">
+    
+    <!-- Title -->
+    <h3 style="font-family: luxurious script; font-size: x-large; color: white;">
+      Connect With Us
+    </h3>
+    <p style="font-family: luxurious script; font-size: small;">
+      Stay connected and follow our journey on your favorite platforms
+    </p>
+    
+    <!-- Social Media Icons -->
+    <div class="d-flex justify-content-center gap-4 my-4">
+      <a href="https://wa.me/your-number" target="_blank" 
+         class="social-icon d-flex align-items-center justify-content-center">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.tiktok.com/@yourusername" target="_blank" 
+         class="social-icon d-flex align-items-center justify-content-center">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.instagram.com/yourusername" target="_blank" 
+         class="social-icon d-flex align-items-center justify-content-center">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:youremail@example.com" target="_blank" 
+         class="social-icon d-flex align-items-center justify-content-center">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <!-- Newsletter Subscription -->
+    <form class="d-flex justify-content-center flex-wrap gap-2 mt-3">
+      <input type="email" class="form-control w-50" placeholder="Enter your email" 
+             style="max-width: 350px; border-radius: 25px; padding: 10px;">
+      <button type="submit" class="btn subscribe-btn">
+        Subscribe
+      </button>
+    </form>
+    
+    <!-- Copyright -->
+    <p style="font-family: luxurious script; font-size: smaller; margin-top: 20px;">
+      &copy; 2025 LuxPair. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Footer Icons Beautiful Design */
+.social-icon {
+  background: white;
+  color: lightpink;
+  font-size: 1.5rem;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: #ff69b4; /* hot pink hover */
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Subscribe button */
+.subscribe-btn {
+  background-color: white;
+  color: lightpink;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.subscribe-btn:hover {
+  background: #ff69b4; /* hover effect */
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+</style>
+    
+
+    
+ 
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>

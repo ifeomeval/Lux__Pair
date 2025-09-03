@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile - LuxPair</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+      background-color: #ffe6f2;
+      font-family: Arial, sans-serif;
+      color: #d63384;
+    }
+    .profile-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      border: 2px solid pink;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Rouge Script', cursive;
+      font-size: 40px;
+      color: deeppink;
+      margin-bottom: 20px;
+    }
+    .user-info {
+      margin: 15px 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .cart-history {
+      margin-top: 25px;
+      text-align: left;
+    }
+    .cart-item {
+      padding: 10px;
+      border-bottom: 1px solid pink;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cart-item img {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+    }
+    .logout-btn {
+      background: deeppink;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .logout-btn:hover {
+      background: #b2226e;
+    }
+  </style>
+</head>
+<body>
+
+
+  <i class="fas fa-arrow-left back-icon" onclick="goBack()"></i>
+  <div class="profile-container">
+    <h1>User Profile</h1>
+    
+    <div class="user-info"><strong>Name:</strong> <span id="userName"></span></div>
+    <div class="user-info"><strong>Email:</strong> <span id="userEmail"></span></div>
+
+    <h3 style="margin-top:30px;">🛒 Cart History</h3>
+    <div id="cartHistory"></div>
+
+    <!-- Updated Logout Button -->
+    <a href="logout.html" class="logout-btn">Log Out</a>
+  </div>
+
+  <script>
+    // Fetch saved user
+    let user = JSON.parse(localStorage.getItem("user"));
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (!user) {
+      alert("No user found! Please Sign Up or Login.");
+      window.location.href = "login.html";
+    }
+
+    // Display user info
+    document.getElementById("userName").innerText = user.name;
+    document.getElementById("userEmail").innerText = user.email;
+
+    // Display cart history
+    let historyDiv = document.getElementById("cartHistory");
+    if (cart.length === 0) {
+      historyDiv.innerHTML = "<p>No cart history yet.</p>";
+    } else {
+      cart.forEach(item => {
+        historyDiv.innerHTML += `
+          <div class="cart-item">
+            <img src="${item.image}" alt="${item.name}">
+            <span>${item.name}</span>
+            <span>₦${item.price.toLocaleString()}</span>
+          </div>
+        `;
+      });
+    }
+
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+  <script type="module">
+  import { auth, db } from "./firebase-init.js";
+
+  // Example: listen for login
+  console.log("Firebase loaded:", auth, db);
+</script>
+
+
+</body>
+</html>
+

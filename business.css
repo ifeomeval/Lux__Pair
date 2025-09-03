@@ -1,0 +1,144 @@
+.brand-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: lightpink;
+        padding: 10px 30px;
+    }
+    .brand-header h1 {
+        font-family: 'Rouge Script', cursive;
+        color: white;
+        font-size: 48px;
+        margin: 0 auto; /* keep centered */
+    }
+    .cart-icon {
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        position: relative;
+    }
+    .cart-icon:hover {
+        color: #ff4081; /* darker pink */
+    }
+    /* Badge for cart count */
+    .cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -12px;
+        background: #ff4081;
+        color: white;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 50%;
+    }
+
+
+
+
+.image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      gap: 20px;
+      max-width: 800px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        border-color: hotpink;
+    }
+
+    /* Button hover effect */
+    .btn-custom {
+        color: lightpink;
+        border: 1px solid lightpink;
+        width: 150px;
+        margin-left: 20px;
+        transition: all 0.3s ease;
+    }
+    .btn-custom:hover {
+        background-color: deeppink; /* dark pink effect */
+        color: white;
+        border-color: deeppink;
+    }
+
+    .rating {
+        color: pink;
+        margin-left: 8px;
+        font-size: 12px;
+    }
+    .rating i {
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+    .rating i:hover {
+        color: deeppink;
+    }
+
+    .brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightpink;
+    padding: 10px 20px;
+    position: relative;
+    flex-wrap: wrap; /* Ensures wrapping on small screens */
+  }
+
+  .brand-header h1 {
+    flex: 1;
+    text-align: center;
+    font-family: 'Rouge Script', cursive;
+    color: white;
+    margin: 0;
+  }
+
+  .cart-icon {
+    position: relative;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .cart-icon i {
+    color: white;
+  }
+
+  #cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: deeppink;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+  }
+
+  /* Make responsive for small screens */
+  @media (max-width: 576px) {
+    .brand-header {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .cart-icon {
+      margin-top: 8px;
+    }
+  }

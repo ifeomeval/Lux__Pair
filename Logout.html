@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logout - LuxPair</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100" style="background: #ffe4ec;">
+
+  <div class="card shadow p-4 text-center" style="width: 350px; border-radius: 20px;">
+    <h2 class="mb-3" style="color: deeppink; font-family: 'Rouge Script';">Logging Out...</h2>
+    <p style="color: #555;">Please wait while we end your session.</p>
+  </div>
+
+  <script>
+    // Clear login state
+    localStorage.removeItem("isLoggedIn");
+
+    // Redirect back to login page after 1.5 seconds
+    setTimeout(function() {
+      window.location.href = "./Login.html";
+    }, 1500);
+  </script>
+
+  <script type="module">
+  import { auth, db } from "./firebase-init.js";
+
+  // Example: listen for login
+  console.log("Firebase loaded:", auth, db);
+</script>
+
+
+</body>
+</html>

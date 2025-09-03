@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart - LuxPair</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+      background-color: #ffe6f2;
+      font-family: Arial, sans-serif;
+      color: #d63384;
+    }
+    h1 {
+      text-align: center;
+      font-family: 'Rouge Script', cursive;
+      font-size: 48px;
+      color: white;
+      background: lightpink;
+      padding: 15px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .back-icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .cart-container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border: 2px solid pink;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid pink;
+    }
+    .cart-item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+    }
+    .cart-item button {
+      background: pink;
+      border: none;
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+    }
+    .cart-item button:hover {
+      background: #d63384;
+    }
+    .total {
+      text-align: right;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #d63384;
+    }
+    .btn-action {
+      background-color: deeppink;
+      color: white;
+      border-radius: 25px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .btn-action:hover {
+      background: #b2226d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>
+    <i class="fas fa-arrow-left back-icon" onclick="goBack()"></i>
+    LuxPair Cart <i class="fas fa-shopping-cart"></i>
+  </h1>
+
+  <div class="cart-container" id="cart-container">
+    <!-- Items will be loaded here -->
+  </div>
+
+  <div class="total" id="cart-total">Total: ₦0</div>
+
+  <div class="text-center mt-4">
+    <button onclick="clearCart()" class="btn-action">Clear Cart</button>
+    <button onclick="goToCheckout()" class="btn-action">Proceed to Checkout</button>
+    <button onclick="continueShopping()" class="btn-action">Continue Shopping</button>
+  </div>
+
+  <script>
+    function loadCart() {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let container = document.getElementById("cart-container");
+      let totalDiv = document.getElementById("cart-total");
+      container.innerHTML = "";
+      let total = 0;
+
+      if (cart.length === 0) {
+        container.innerHTML = "<p style='text-align:center; color:gray;'>Your cart is empty.</p>";
+      }
+
+      cart.forEach((item, index) => {
+        total += item.price;
+        container.innerHTML += `
+          <div class="cart-item">
+            <img src="${item.image}" alt="${item.name}">
+            <span>${item.name}</span>
+            <span>₦${item.price.toLocaleString()}</span>
+            <button onclick="removeFromCart(${index})">Remove</button>
+          </div>
+        `;
+      });
+
+      totalDiv.innerHTML = "Total: ₦" + total.toLocaleString();
+    }
+
+    function removeFromCart(index) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+    }
+
+    function clearCart() {
+      localStorage.removeItem("cart");
+      loadCart();
+      alert("Your cart has been cleared!");
+    }
+
+    function goToCheckout() {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
+
+      let message = "Hello, I want to place an order:%0A";
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        message += `${index + 1}. ${item.name} - ₦${item.price.toLocaleString()}%0A`;
+        total += item.price;
+      });
+
+      message += `%0ATotal: ₦${total.toLocaleString()}`;
+
+      // Replace with your WhatsApp number (e.g., 2349012345678)
+      let phoneNumber = "2349135801851";  
+      let url = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(url, "_blank");
+    }
+
+    function continueShopping() {
+      window.location.href = "index.html";
+    }
+
+    function goBack() {
+      window.history.back();
+    }
+
+    loadCart();
+
+    
+  </script>
+
+  <script type="module">
+  import { auth, db } from "./firebase-init.js";
+
+  // Example: listen for login
+  console.log("Firebase loaded:", auth, db);
+</script>
+
+
+</body>
+</html>
