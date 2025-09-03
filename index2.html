@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Business</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chela+One&family=Mozilla+Headline:wght@200..700&family=Playwrite+MX+Guides&family=Rouge+Script&family=Spicy+Rice&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./business.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script type="module" src="./firebase-init.js"></script>
+
+
+
+
+<script>
+    // Check login status before showing page
+    window.onload = function() {
+      if (!localStorage.getItem("isLoggedIn")) {
+        window.location.href = "login.html"; // Redirect if not logged in
+      }
+    }
+  </script>
+  </head>
+  <body>
+
+
+<div class="container-fluid" style="background-color: lightpink;">
+  <div class="row align-items-center text-center py-2">
+
+    <!-- Left Side (Cart + Profile) -->
+    <div class="col-4 d-flex justify-content-start align-items-center">
+      <!-- Cart Icon -->
+      <a href="./Cart.html" class="cart-icon position-relative me-3" style="color: white; font-size: 20px;">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count" 
+              style="position: absolute; top: -5px; right: -10px; background: deeppink; color: white; 
+                     font-size: 12px; padding: 2px 6px; border-radius: 50%;">
+          0
+        </span>
+      </a>
+
+      <!-- Profile Icon -->
+      <a href="profile.html" style="color: white; font-size: 20px; margin-right: 15px;">
+        <i class="fas fa-user-circle"></i>
+      </a>
+    </div>
+
+    <!-- Brand Name in center -->
+    <div class="col-4">
+      <h1 class="m-0" style="font-family: Rouge Script; color: white;">
+        LuxPair
+      </h1>
+    </div>
+
+    <!-- Right Side (Login) -->
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="./Login.html" class="btn btn-sm" 
+         style="background-color: deeppink; color: white; border-radius: 20px; padding: 5px 15px;">
+         Login
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid" style="background-color: white;">
+    
+    <!-- Toggler button (for small screens) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./index2.html" style="color: lightpink; font-family: luxurious script;">HOME</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#" style="color: lightpink; font-family: luxurious script;">ABOUT</a>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false" style="color: lightpink; font-family: luxurious script;">
+            SHOP
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./Malej.html" style="color: lightpink; font-family: luxurious script;">Male Jewelry</a></li>
+            <li><a class="dropdown-item" href="./Femalej.html" style="color: lightpink; font-family: luxurious script;">Female Jewelry</a></li>
+            <li><a class="dropdown-item" href="./Crocs.html" style="color: lightpink; font-family: luxurious script;">Crocs</a></li>
+            <li><a class="dropdown-item" href="./Snapback.html" style="color: lightpink; font-family: luxurious script;">Snapback</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- NAVBAR END -->
+
+
+
+
+
+    <!-- HERO SECTION -->
+    <div class="position-relative text-center">
+        <img src="./Asset/Images/Background2.jpg" class="img-fluid" alt="Image" style="height: 400px; width: 100%;">
+        <div class="position-absolute top-50 start-50 translate-middle text-white p-3 rounded">
+            <div class="d-flex justify-content-between">
+                <div class="text-container" style="padding: 20px;">
+                    <h1 style="font-family: Rouge Script; font-size: x-large;">Shop Our</h1>
+                    <h1 style="font-family: luxurious script;">NEW ARRIVALS</h1><br>
+                    <button type="button" class="btn-sm" style="background-color: lightpink; border-color: lightpink; border: 50px; color: white; font-family: luxurious script; border-radius: 10px;">SHOP NOW</button>
+                </div>
+                <div class="image-grid">
+                    <img src="./Asset/Images/Femalej1.jpg" alt="Image 1" style="height: 130px; width: 80%;">
+                    <img src="./Asset/Images/Crocs1.jpg" alt="Image 2" style="height: 130px; width: 80%;">
+                    <img src="./Asset/Images/Snapback1.jpg" alt="Image 3" style="height: 130px; width: 80%;">
+                    <img src="./Asset/Images/Malej1.jpg" alt="Image 4" style="height: 130px; width: 80%;">
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center"> <!-- full width on small screens -->
+                <h1 style="font-family: luxurious script; font-size: larger; color: lightpink;">
+                    NEW ARRIVALS
+                </h1>
+            </div>
+        </div>
+    </div><br>
+
+
+    <div class="container text-center">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+    
+            <div class="col">
+                <img src="./Asset/Images/Crocs1.jpg" class="img-fluid" style="height: 200px; width: 80%;">
+                <h1 style="font-family: luxurious script; font-size: medium; color: lightpink;">CROCS</h1>
+            </div>
+    
+            <div class="col">
+                <img src="./Asset/Images/Malej1.jpg" class="img-fluid" style="height: 200px; width: 80%;">
+                <h1 style="font-family: luxurious script; font-size: medium; color: lightpink;">MALE JEWELRY</h1>
+            </div>
+    
+            <div class="col">
+                <img src="./Asset/Images/Femalej1.jpg" class="img-fluid" style="height: 200px; width: 80%;">
+                <h1 style="font-family: luxurious script; font-size: medium; color: lightpink;">FEMALE JEWELRY</h1>
+            </div>
+    
+            <div class="col">
+                <img src="./Asset/Images/Snapback1.jpg" class="img-fluid" style="height: 200px; width: 80%;">
+                <h1 style="font-family: luxurious script; font-size: medium; color: lightpink;">SNAPBACK</h1>
+            </div>
+    
+        </div>
+    </div><br>
+
+
+
+    <div class="container-fluid" style="background-color: lightpink; color: white;">
+        <div class="row align-items-center p-4">
+    
+            <!-- Images -->
+            <div class="col-12 col-md-6 text-center">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <img src="./Asset/Images/Bestie1.jpg" alt="Image 1" class="img-fluid rounded"
+                            style="height: 270px; width: 100%;">
+                    </div>
+                    <div class="col-6">
+                        <img src="./Asset/Images/Bestie2.jpg" alt="Image 2" class="img-fluid rounded"
+                            style="height: 270px; width: 100%;">
+                    </div>
+                </div>
+            </div>
+    
+            <!-- About Text -->
+            <div class="col-12 col-md-6">
+                <h2 class="text-center text-md-start d-flex justify-content-center"
+                    style="font-family: luxurious script; font-size: larger; padding-top: 30px;">
+                    ABOUT US
+                </h2>
+                <p class="text-center text-md-start"
+                    style="font-family: luxurious script; font-size: small; padding-top: 10px;">
+                    What started as friendship has grown into a shared vision. We’re two best friends, bonded for over three
+                    years,
+                    both final-year Computer Science students who decided to blend our creativity with our love for style.
+                    Together,
+                    we’ve built a space where individuality meets expression—through jewelry, crocs, and snapbacks that
+                    redefine everyday
+                    fashion.<br><br>
+    
+                    Our brand isn’t just about shopping; it’s about community, confidence, and character. Every piece we
+                    curate—whether it’s
+                    elegant jewelry that makes a statement, crocs that balance comfort and trend, or snapbacks that complete
+                    a look—is
+                    chosen with intention. We believe fashion should feel as good as it looks, and that’s what we bring to
+                    you.<br><br>
+    
+                    From late-night coding sessions to building this platform, our journey has been rooted in passion,
+                    friendship,
+                    and an eye for aesthetics. Here, you don’t just buy accessories—you invest in little details that tell
+                    your story.<br><br>
+    
+                    Welcome to our world. Welcome to a brand created by besties, for everyone bold enough to stand out.
+                    <br><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Footer Section -->
+<footer class="text-white py-5" style="background-color: lightpink;">
+  <div class="container text-center">
+    
+    <!-- Title -->
+    <h3 style="font-family: luxurious script; font-size: x-large; color: white;">
+      Connect With Us
+    </h3>
+    <p style="font-family: luxurious script; font-size: small;">
+      Stay connected and follow our journey on your favorite platforms
+    </p>
+    
+    <!-- Social Media Icons -->
+    <div class="d-flex justify-content-center gap-4 my-4">
+      <a href="https://wa.me/2349135801851" target="_blank" 
+         class="social-icon d-flex align-items-center justify-content-center">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.tiktok.com/@valerie_3450" target="_blank" 
+         class="social-icon d-flex align-items-center justify-content-center">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.instagram.com/yourusername" target="_blank" 
+         class="social-icon d-flex align-items-center justify-content-center">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:oliselokeebuwa@gmail.com" target="_blank" 
+         class="social-icon d-flex align-items-center justify-content-center">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <!-- Newsletter Subscription -->
+    <form class="d-flex justify-content-center flex-wrap gap-2 mt-3">
+      <input type="email" class="form-control w-50" placeholder="Enter your email" 
+             style="max-width: 350px; border-radius: 25px; padding: 10px; color: lightpink;">
+      <button type="submit" class="btn subscribe-btn">
+        Subscribe
+      </button>
+    </form>
+    
+    <!-- Copyright -->
+    <p style="font-family: luxurious script; font-size: smaller; margin-top: 20px;">
+      &copy; 2025 LuxPair. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Footer Icons Beautiful Design */
+.social-icon {
+  background: white;
+  color: lightpink;
+  font-size: 1.5rem;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: #ff69b4; /* hot pink hover */
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Subscribe button */
+.subscribe-btn {
+  background-color: white;
+  color: lightpink;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.subscribe-btn:hover {
+  background: #ff69b4; /* hover effect */
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+</style>
+
+
+<div id="output"></div>
+<script>
+  fetch("http://localhost:5000/api/hello")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("output").innerText = data.message;
+    })
+    .catch(err => console.error(err));
+</script>
+
+<script type="module">
+  import { auth, db } from "./firebase-init.js";
+
+  // Example: listen for login
+  console.log("Firebase loaded:", auth, db);
+</script>
+
+
+
+
+    <script>
+    function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ name, price, image });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        
+        updateCartCount();  // update number near cart icon
+        alert(name + " added to cart!");
+    }
+
+    function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        document.getElementById("cart-count").innerText = cart.length;
+    }
+
+    // Run when page loads
+    document.addEventListener("DOMContentLoaded", updateCartCount);
+</script>
+
+    
+<script>
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "login.html";
+    }
+  </script>
+    
+ 
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>
